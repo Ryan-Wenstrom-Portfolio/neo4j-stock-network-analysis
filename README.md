@@ -259,6 +259,7 @@ The large raw price dataset and intermediate log-return matrix are intentionally
 
 ```bash
 python -m pip install -r requirements.txt
+```
 
 ### 2. Prepare the Return Matrix
 
@@ -329,7 +330,7 @@ Calculate weighted PageRank
 Compare centrality measures
 ```
 
-The final node-level graph metrics are exported to:
+Export the result of Section 11 from Neo4j as:
 
 ```text
 data/processed/node_metrics.csv
