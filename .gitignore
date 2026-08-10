@@ -16,3 +16,5 @@ data/raw/
 # Operating system files
 .DS_Store
 Thumbs.db
+
+data/reference/
