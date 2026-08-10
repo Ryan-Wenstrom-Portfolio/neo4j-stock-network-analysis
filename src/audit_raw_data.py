@@ -45,8 +45,6 @@ coverage = (
 coverage["first_date"] = coverage["first_date"].dt.date
 coverage["last_date"] = coverage["last_date"].dt.date
 
-coverage.to_csv(OUTPUT_FILE, index=False)
-
 
 print(f"\nTicker coverage saved to:")
 print(OUTPUT_FILE)
@@ -62,6 +60,8 @@ total_trading_dates = df["Date"].nunique()
 coverage["coverage_pct"] = (
     coverage["row_count"] / total_trading_dates * 100
 )
+
+coverage.to_csv(OUTPUT_FILE, index=False)
 
 print("\n=== COVERAGE SUMMARY ===")
 print(f"Total unique trading dates: {total_trading_dates:,}")
