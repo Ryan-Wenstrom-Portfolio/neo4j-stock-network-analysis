@@ -322,3 +322,46 @@ RETURN
         unweighted_scores,
         weighted_scores
     ) AS unweighted_vs_weighted_pagerank;
+
+    // ------------------------------------------------------------
+// 11. Export-ready node metrics
+// ------------------------------------------------------------
+
+// Combine connected-component membership with the centrality
+// properties already stored in the GDS in-memory graph.
+//
+// Run this query after Sections 1-10, then export the result
+// from Neo4j as data/processed/node_metrics.csv.
+
+CALL gds.wcc.stream('stockGraph')
+
+YIELD
+    nodeId,
+    componentId
+
+RETURN
+    gds.util.asNode(nodeId).ticker AS ticker,
+
+    gds.util.nodeProperty(
+        'stockGraph',
+        nodeId,
+        'degree'
+    ) AS degree,
+
+    gds.util.nodeProperty(
+        'stockGraph',
+        nodeId,
+        'pagerank_unweighted'
+    ) AS pagerank_unweighted,
+
+    gds.util.nodeProperty(
+        'stockGraph',
+        nodeId,
+        'pagerank_weighted'
+    ) AS pagerank_weighted,
+
+    componentId AS component_id
+
+ORDER BY
+    pagerank_weighted DESC,
+    ticker ASC;
