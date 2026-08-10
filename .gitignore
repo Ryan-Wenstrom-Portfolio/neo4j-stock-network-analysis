@@ -1,0 +1,18 @@
+# Neo4j credentials and environment variables
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Raw source data
+data/raw/
+
+# Operating system files
+.DS_Store
+Thumbs.db
