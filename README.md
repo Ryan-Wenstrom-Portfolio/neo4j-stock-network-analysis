@@ -40,7 +40,7 @@ This is a **network-structure analysis**, not a stock-prediction or trading mode
 
 ## Data Preparation
 
-The local source dataset contains historical daily stock-price observations. The analysis pipeline uses **adjusted closing prices** to calculate daily log returns.
+The local source dataset contains historical daily stock-price observations sourced from Yahoo Finance. Raw price data and the intermediate return matrix are excluded from this repository. The analysis pipeline uses **adjusted closing prices** to calculate daily log returns.
 
 The preprocessing workflow:
 
