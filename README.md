@@ -40,7 +40,9 @@ This is a **network-structure analysis**, not a stock-prediction or trading mode
 
 ## Data Preparation
 
-The local source dataset contains historical daily stock-price observations sourced from Yahoo Finance. Raw price data and the intermediate return matrix are excluded from this repository. The analysis pipeline uses **adjusted closing prices** to calculate daily log returns.
+**Source dataset:** [NASDAQ-100 Stock Price Data](https://www.kaggle.com/datasets/kalilurrahman/nasdaq100-stock-price-data) by Kalilur Rahman on Kaggle. The dataset page describes daily stock-price data for NASDAQ-100 constituents from 2010 and acknowledges the Yahoo Finance API development team as the upstream source. Kaggle lists the dataset license as **“Data files © Original Authors.”**
+
+Raw price data and the intermediate return matrix are excluded from this repository. The analysis pipeline uses **adjusted closing prices** to calculate daily log returns.
 
 The preprocessing workflow:
 
