@@ -216,6 +216,15 @@ These findings are descriptive of this **constructed historical correlation netw
 | **Plotly** | Interactive network visualization |
 | **Git / GitHub** | Version control and portfolio presentation |
 
+### Verified Environment
+
+The graph analysis was executed with:
+
+- **Neo4j:** `2026.06.0`
+- **Neo4j Graph Data Science:** `2026.06.0`
+
+Python package versions are pinned in [`requirements.txt`](requirements.txt).
+
 ---
 
 ## Repository Structure
